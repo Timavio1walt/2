@@ -1,0 +1,90 @@
+body{
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer{
+    background-color: #eee;
+    padding: 5px;
+    text-align: center;
+}
+footer a{
+    color: #333;
+    text-decoration: none;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.vopros1, .vopros2, .vopros3, .vopros4{
+    cursor: pointer;
+    background: #222;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.vopros1::after, .vopros2::after, .vopros3::after, .vopros4::after{
+    content: "↓";
+    transition: transform 0.3s;
+}
+.vopros1.active::after, .vopros2.active::after, .vopros3.active::after, .vopros4.active::after{
+    transform: rotate(180deg);
+}
+.panel1, .panel2, .panel3, .panel4{
+    max-height: 0;
+    overflow: hidden;
+    background: #333;
+    color: #ddd;
+    transition: max-height 0.4s ease;
+    padding: 0 10px;
+}
+.panel1.open, .panel2.open, .panel3.open, .panel4.open{
+    padding: 10px;
+    max-height: 300px;
+}
+.panel1 ul, .panel2 ul, .panel3 ul, .panel4 ul{
+    margin: 0;
+    padding-left: 20px;
+}
+@media (max-width: 768px) {
+    .conrainer {
+        width: 95%;
+    }
+    .box {
+        width: 100%;
+        height: 200%;
+        font-size: 14px;
+        line-height: 200px;
+    }
+    body{
+        font-size: 14px;
+    }
+}
